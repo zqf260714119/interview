@@ -19,4 +19,7 @@
 
 def how_many_ways(digitarray):
     # implement here
-    
+    digitarray=str(digitarray)
+    cnt = 1
+    c = [b for b in [digitarray[i:i + x + 1] for x in range(len(digitarray)) for i in range(len(digitarray) - x)] if len(b)==2 and int(b)>=0 and int(b)<=25 and not b.startswith('0')]
+    print cnt+len(c)
